@@ -1,0 +1,26 @@
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.pdb
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.pdb
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.dll.config
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.pdb
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.dll.config
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.xml
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.dll.config
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Shared.pdb
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.pdb
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\Moviegram.Data.dll.config
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.xml
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.csprojResolveAssemblyReference.cache
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Shared\obj\Debug\Moviegram.Shared.pdb

@@ -1,0 +1,9 @@
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Services\bin\Debug\Moviegram.Services.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Services\bin\Debug\Moviegram.Services.pdb
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Services\obj\Debug\Moviegram.Services.dll
+c:\users\łukasz hera\documents\visual studio 2017\Projects\Moviegram\Moviegram.Services\obj\Debug\Moviegram.Services.pdb
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Services\bin\Debug\Moviegram.Services.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Services\bin\Debug\Moviegram.Services.pdb
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Services\obj\Debug\Moviegram.Services.dll
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Services\obj\Debug\Moviegram.Services.pdb
+C:\Users\Łukasz Hera\Source\Repos\LukaszHe\Moviegram\Moviegram\Moviegram.Services\obj\Debug\Moviegram.Services.csprojResolveAssemblyReference.cache
