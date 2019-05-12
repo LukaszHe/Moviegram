@@ -9,5 +9,7 @@ namespace Moviegram.Shared.Interfaces
     public interface IMoviesDataManager
     {
         Task<ICollection<MovieDTO>> GetAllMovies();
+
+        Task<MovieDTO> GetMovieById(Guid movieId);
     }
 }

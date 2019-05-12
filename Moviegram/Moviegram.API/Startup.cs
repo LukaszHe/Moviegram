@@ -10,6 +10,10 @@ using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 using Moviegram.Data.Context;
 using Moviegram.Shared.Interfaces;
+using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Moviegram.Shared;
+using AutoMapper;
+using Moviegram.API.Utils.AutoMapper;
 
 namespace Moviegram
 {
@@ -30,16 +34,28 @@ namespace Moviegram
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var manager = new ApplicationPartManager();
+            manager.ApplicationParts.Add(new AssemblyPart(typeof(Startup).Assembly));
+
+            services.AddSingleton(manager);
             // Add framework services.
             services.AddMvc();
 
             services.AddScoped(_ => new MoviegramContext(Configuration.GetConnectionString("MoviegramDB")));
-            services.AddTransient<IMoviesDataManager, IMoviesDataManager>();
+            services.AddTransient<IMoviesDataManager, MoviesDataManager>();
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MoviegramMappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
