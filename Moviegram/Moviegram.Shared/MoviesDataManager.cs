@@ -8,6 +8,7 @@ using Moviegram.Shared.Domain;
 using Moviegram.Data.Context;
 using System.Data.Entity;
 using AutoMapper;
+using Moviegram.Data.Entities;
 
 namespace Moviegram.Shared
 {
@@ -24,16 +25,23 @@ namespace Moviegram.Shared
 
         public async Task<ICollection<MovieDTO>> GetAllMovies()
         {
-            var moviesList = _moviegramContext.Movies.ToListAsync();
+            var moviesList = await _moviegramContext.Movies.ToListAsync();
 
             return _mapper.Map<List<MovieDTO>>(moviesList);
         }
 
         public async Task<MovieDTO> GetMovieById(Guid movieId)
         {
-            var movie = _moviegramContext.Movies.FindAsync(movieId);
+            var movie = await _moviegramContext.Movies.FindAsync(movieId);
 
             return _mapper.Map<MovieDTO>(movie);
+        }
+
+        public async Task<ICollection<MovieDTO>> SearchMoviesDetailsForText(string searchText)
+        {
+            var movies = _moviegramContext.Movies.Where(x => x.Details.Contains(searchText));
+
+            return _mapper.Map<List<MovieDTO>>(movies);
         }
     }
 }

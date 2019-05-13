@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201905122225409_Movie_AdditionalColumns.Designer.cs">
       <DependentUpon>201905122225409_Movie_AdditionalColumns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905130923517_Movie_DetailsAdded.cs" />
+    <Compile Include="Migrations\201905130923517_Movie_DetailsAdded.Designer.cs">
+      <DependentUpon>201905130923517_Movie_DetailsAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905122225409_Movie_AdditionalColumns.resx">
       <DependentUpon>201905122225409_Movie_AdditionalColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905130923517_Movie_DetailsAdded.resx">
+      <DependentUpon>201905130923517_Movie_DetailsAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

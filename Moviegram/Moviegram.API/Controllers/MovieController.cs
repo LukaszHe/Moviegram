@@ -13,8 +13,8 @@ namespace Moviegram.API.Controllers
     [Route("api/movie")]
     public class MovieController : Controller
     {
-        private readonly IMoviesDataManager _moviesDataManager; 
-        
+        private readonly IMoviesDataManager _moviesDataManager;
+
         public MovieController(IMoviesDataManager moviesDataManager)
         {
             _moviesDataManager = moviesDataManager;
@@ -35,8 +35,8 @@ namespace Moviegram.API.Controllers
         public async Task<IActionResult> GetMoviedById(Guid movieId)
         {
             var movie = await _moviesDataManager.GetMovieById(movieId);
-            
-            if(movie == null)
+
+            if (movie == null)
             {
                 return NotFound();
             }
@@ -47,20 +47,46 @@ namespace Moviegram.API.Controllers
         /// <summary>
         /// Get list of all movies
         /// </summary>
+        /// <remarks>Returns the whole list of the movies</remarks>
+        /// <response code="200">successful operation</response>
+        /// <response code="404">No movies in the database</response>
         [HttpGet]
-        [Route("GetAllMovies")]
+        [Route("/api/movie/GetAllMovies")]
         [SwaggerOperation("GetAllMovies")]
+        [SwaggerResponse(statusCode: 200, type: typeof(List<MovieDTO>), description: "successful operation")]
         public async Task<IActionResult> Get()
         {
             var moviesList = await _moviesDataManager.GetAllMovies();
 
-            if(moviesList == null)
+            if (moviesList == null || moviesList.Count() == 0)
             {
                 return NotFound();
             }
 
             return new ObjectResult(moviesList);
+        }
 
+        /// <summary>
+        /// Get list of all movies with a given text in their details
+        /// </summary>
+        /// <remarks>Return a list of movies where the search text occurs in the details </remarks>
+        /// <param name="searchText">Text to search</param>
+        /// <response code="200">successful operation</response>
+        /// <response code="404">Movies with the search text not found</response>
+        [HttpGet]
+        [Route("/api/movie/SearchMoviesDetails/{searchText}")]
+        [SwaggerOperation("SearchMoviesDetails")]
+        [SwaggerResponse(statusCode: 200, type: typeof(List<MovieDTO>), description: "successful operation")]
+        public async Task<IActionResult> SearchMoviesDetails(string searchText)
+        {
+            var moviesList = await _moviesDataManager.SearchMoviesDetailsForText(searchText);
+
+            if (moviesList == null || moviesList.Count() == 0)
+            {
+                return NotFound();
+            }
+
+            return new ObjectResult(moviesList);
         }
     }
 }

@@ -15,7 +15,14 @@ namespace Moviegram.Data.Context
         public MoviegramContext(string connectionString) : base(connectionString)
         {
         }
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Cinema> Cinemas { get; set; }
-     }
+        public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Cinema> Cinemas { get; set; }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<MoviegramContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
+    }
 }
