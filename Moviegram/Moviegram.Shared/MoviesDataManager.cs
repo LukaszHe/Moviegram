@@ -25,14 +25,14 @@ namespace Moviegram.Shared
 
         public async Task<ICollection<MovieDTO>> GetAllMovies()
         {
-            var moviesList = await _moviegramContext.Movies.ToListAsync();
+            var moviesList = _moviegramContext.Movies.ToList();
 
             return _mapper.Map<List<MovieDTO>>(moviesList);
         }
 
         public async Task<MovieDTO> GetMovieById(Guid movieId)
         {
-            var movie = await _moviegramContext.Movies.FindAsync(movieId);
+            var movie = _moviegramContext.Movies.Single(x => x.Id == movieId);
 
             return _mapper.Map<MovieDTO>(movie);
         }

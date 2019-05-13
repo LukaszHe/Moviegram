@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 using AutoMapper;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -44,6 +45,13 @@ namespace Moviegram.Shared.Test
                         Title = "Jurrasic World: Fallen Kingdom",
                         Details = "Dinosaurs are here",
                         ReleaseDate = new DateTime(2018, 5, 21)
+                    },
+                                        new Movie
+                    {
+                        Id = Guid.Parse("96c636b9-606e-4da6-b8fe-fd9290830d32"),
+                        Title = "Dark Night Rises",
+                        Details = "Batman movies",
+                        ReleaseDate = new DateTime(2008, 7, 18)
                     }
                 }.AsQueryable();
 
@@ -52,6 +60,7 @@ namespace Moviegram.Shared.Test
             moviesMock.As<IQueryable<Movie>>().Setup(m => m.Expression).Returns(movies.Expression);
             moviesMock.As<IQueryable<Movie>>().Setup(m => m.ElementType).Returns(movies.ElementType);
             moviesMock.As<IQueryable<Movie>>().Setup(m => m.GetEnumerator()).Returns(movies.GetEnumerator());
+
 
             _moviegramContextMock = new Mock<MoviegramContext>();
             _moviegramContextMock.Setup(x => x.Movies).Returns(moviesMock.Object);
@@ -74,6 +83,34 @@ namespace Moviegram.Shared.Test
 
             //Assert
             Assert.AreEqual(2, moviesFound.Count);
+        }
+
+        [TestMethod]
+        public void Movies_GetAllMovies()
+        {
+            //Arrange 
+            var moviesDataManager = new MoviesDataManager(_moviegramContextMock.Object, _mapper);
+
+            //Act 
+            var allMovies = moviesDataManager.GetAllMovies().GetAwaiter().GetResult();
+
+            //Assert
+            Assert.AreEqual(4, allMovies.Count);
+        }
+
+        [TestMethod]
+        public void Movie_GetById()
+        {
+            //Arrange
+            var movieId = Guid.Parse("648a888b-9044-4a58-a3a7-69e5902019c6");
+            var moviesDataManager = new MoviesDataManager(_moviegramContextMock.Object, _mapper);
+
+            //Act
+            var movie = moviesDataManager.GetMovieById(movieId).GetAwaiter().GetResult();
+
+            //Assert
+            Assert.IsNotNull(movie);
+            Assert.AreEqual("Avengers: Endgame", movie.Title);
         }
     }
 }
